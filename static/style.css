@@ -1,0 +1,30 @@
+body {
+	margin: 40px auto;
+	max-width: 650px;
+	line-height: 1.6;
+	font-size: 18px;
+	font-family: sans-serif;
+	background-color: #EEEEEE;
+	color: #444;
+	padding: 0 10px;
+}
+
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
+.toplink {
+	font-family: monospace;
+	font-size: 16px;
+}
+
+.two-col {
+	display: flex;
+}
+
+.col {
+	flex: 50%;
+	text-align: center;
+	padding: 10px;
+}
+

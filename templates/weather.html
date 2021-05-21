@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather - Sweather</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="shortcut icon" type="image/png" href="/static/images/icon-72x72.png">
+</head>
+<body>
+	<a href="/" class="toplink">&lt;- back to homepage</a>
+	<h1>Your Forecast</h1>
+	<div class="two-col">
+		{{ range .Periods }}
+		<div class="col">
+			<img src="{{ .Icon }}" title="{{ .Shortforecast }}" alt="{{ .Shortforecast }}">
+			<h3>{{ .Name }} - <span style="color: {{ if .Isdaytime }} red {{
+					else }} blue {{ end }};" >{{ .Temperature }}</span></h3>
+			<p>{{ .Detailedforecast }}</p>
+		</div>
+		{{ if not .Isdaytime }} </div><br><div class="two-col"> {{ end }}
+		{{ end }}
+	</div>
+</body>
+</html>

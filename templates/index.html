@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sweather</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="shortcut icon" type="image/png" href="/static/images/icon-72x72.png">
+	<link rel="manifest" href="manifest.json">
+	<!-- iOS icons support -->
+	<link rel="apple-touch-icon" href="/static/images/icon-72x72.png">
+	<link rel="apple-touch-icon" href="/static/images/icon-96x96.png">
+	<link rel="apple-touch-icon" href="/static/images/icon-128x128.png">
+	<link rel="apple-touch-icon" href="/static/images/icon-144x144.png">
+	<link rel="apple-touch-icon" href="/static/images/icon-152x152.png">
+	<link rel="apple-touch-icon" href="/static/images/icon-192x192.png">
+	<link rel="apple-touch-icon" href="/static/images/icon-384x384.png">
+	<link rel="apple-touch-icon" href="/static/images/icon-512x512.png">
+</head>
+<body>
+	<h1>Sweather</h1>
+	<form action="/" method="POST">
+		Address: <input type="text" name="addr" placeholder="42 Main St, City, State">
+		<input type="submit" value="Get Forecast">
+	</form>
+	<h3>What is Sweather</h3>
+	<p>
+		Sweather is a simple weather web app (PWA). Sweather is a king of
+		portmanteau of the words "simple" and "weather". Sweather uses the
+		National Weather Service API to get weather data and puts it on a
+		simple webpage. Also, Sweather doesn't collect or do anything with your
+		personal data.
+	</p>
+	<h3>How does it work?</h3>
+	<p>
+		Sweather uses the <a
+			href="https://www.weather.gov/documentation/services-web-api">NWS
+			API</a> to find your local weather from your provided location and the <a
+			href="https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html">US
+		Census Bureau Geocoding Service</a> to turn your provided zipcode into
+		a usable location.
+	</p>
+	<h3>Todo</h3>
+	<p>
+		Sweather is still in progress. Here's a list of things Sweather hopes
+		to accomplish
+		<ul>
+			<li>Get current weather</li>
+			<li>Get weather alerts</li>
+			<li>Use caching for speed</li>
+		</ul>
+	</p>
+</body>
+</html>
