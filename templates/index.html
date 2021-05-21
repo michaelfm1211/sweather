@@ -3,18 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sweather</title>
-	<link rel="stylesheet" href="/static/style.css">
-	<link rel="shortcut icon" type="image/png" href="/static/images/icon-72x72.png">
-	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" type="image/png" href="/images/icon-72x72.png">
+	<link rel="manifest" href="/manifest.json">	
 	<!-- iOS icons support -->
-	<link rel="apple-touch-icon" href="/static/images/icon-72x72.png">
-	<link rel="apple-touch-icon" href="/static/images/icon-96x96.png">
-	<link rel="apple-touch-icon" href="/static/images/icon-128x128.png">
-	<link rel="apple-touch-icon" href="/static/images/icon-144x144.png">
-	<link rel="apple-touch-icon" href="/static/images/icon-152x152.png">
-	<link rel="apple-touch-icon" href="/static/images/icon-192x192.png">
-	<link rel="apple-touch-icon" href="/static/images/icon-384x384.png">
-	<link rel="apple-touch-icon" href="/static/images/icon-512x512.png">
+	<link rel="apple-touch-icon" href="/images/icon-72x72.png">
+	<link rel="apple-touch-icon" href="/images/icon-96x96.png">
+	<link rel="apple-touch-icon" href="/images/icon-128x128.png">
+	<link rel="apple-touch-icon" href="/images/icon-144x144.png">
+	<link rel="apple-touch-icon" href="/images/icon-152x152.png">
+	<link rel="apple-touch-icon" href="/images/icon-192x192.png">
+	<link rel="apple-touch-icon" href="/images/icon-384x384.png">
+	<link rel="apple-touch-icon" href="/images/icon-512x512.png">
 </head>
 <body>
 	<h1>Sweather</h1>
@@ -49,5 +49,14 @@
 			<li>Use caching for speed</li>
 		</ul>
 	</p>
+	<script>
+		// yes, I know Sweather doesn't use JS, but a service worker with a
+		// fetch listener is required for an installable PWA, so Sweather uses
+		// a minimal handler and a few other methods just to make it installable
+		// and show an error page when you're offline. I promise that's it.
+		if("serviceWorker" in navigator) {
+			navigator.serviceWorker.register("service-worker.js", { scope: "/"})
+		}
+	</script>
 </body>
 </html>

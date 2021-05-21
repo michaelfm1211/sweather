@@ -29,6 +29,10 @@ func weather(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "weather.html", forecast)
 }
 
+func offline(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "offline.html", nil)
+}
+
 func index(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case http.MethodGet:
@@ -48,10 +52,11 @@ func main() {
 
 	r := mux.NewRouter()
 	r.HandleFunc("/", index).Methods("GET", "POST")
+	r.HandleFunc("/offline", offline).Methods("GET")
 	r.HandleFunc("/weather/{addr}", weather).Methods("GET")
 
 	staticServer := http.FileServer(http.Dir("static"))
-	r.PathPrefix("/static").Handler(http.StripPrefix("/static", staticServer))
+	r.PathPrefix("/").Handler(staticServer)
 
 	log.Printf("Server up on port %s\n", port)
 	log.Fatal(http.ListenAndServe(":" + port, r))
