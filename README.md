@@ -8,5 +8,4 @@ Weather apps are too complicated for something as simple as the weather. Sweathe
 If you want to, you can run a Sweather instance. All you'll need to is run `go build`, set `$PORT` to your desired port to use (although some services such as Heroku does this for you), and run the compiled binary.
 
 ***\* Some JS is actually used, but for the sole purpose of being able to install
-and function as a PWA. If you use Sweather as a PWA, this JS doesn't really
-matter to you and might as well not exist***
+and function as a PWA.***
