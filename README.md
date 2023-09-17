@@ -1,5 +1,5 @@
 # Sweather
-Sweather is a simple javascript-less\* weather PWA written in HTML5, CSS3, and Golang. The name Sweather is a portmanteau between the words "simple" and "weather". Sweather uses the [National Weather Service's API](https://www.weather.gov/documentation/services-web-api) to get the weather, and the [US Census Bureau Geocoding Service](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html) to turn addresses into latitude and longitude coordinates for use with the other API. Other than those two APIs, Sweather has no dependencies.
+Sweather is a simple javascript-less\* weather PWA written in HTML5, CSS3, and Golang. The name Sweather is a portmanteau between the words "simple" and "weather". Sweather uses the [National Weather Service's API](https://www.weather.gov/documentation/services-web-api) to get the weather, and the [US Census Bureau Geocoding Service](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html) to turn addresses into latitude and longitude coordinates for use with the other API. Other than those two APIs, Sweather's only dependency is [gorilla/mux](github.com/gorilla/mux).
 
 There used to be a Heroku instance of Sweather, however, it has been disabled due to Heroku ending their free plan. The code should still work for your own instances.
 
